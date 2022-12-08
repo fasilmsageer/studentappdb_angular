@@ -16,5 +16,9 @@ export class ApiService {
   {
     return this.http.get("http://localhost:8080/viewstudent")
   }
+  searchStudent=(dataTosend:any)=>
+  {
+    return this.http.post("http://localhost:8080/searchstudent",dataTosend)
+  }
   
 }
