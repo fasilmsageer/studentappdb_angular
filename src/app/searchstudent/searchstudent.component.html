@@ -13,7 +13,29 @@
                     <button (click)="readValue()" class="btn btn-success">Search Student</button>
                 </div>
             </div>
-            
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table" *ngFor="let p of searchdata">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Adm No</th>
+                            <th scope="col">Roll No</th>
+                            <th scope="col">College</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">{{p.name}}</th>
+                            <td>{{p.admno}}</td>
+                            <td>{{p.rollno}}</td>
+                            <td>{{p.college}}</td>
+                            <td><button (click)="deleteBtn(p.id)" class="btn btn-danger">Delete</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>

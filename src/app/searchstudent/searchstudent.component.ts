@@ -33,5 +33,18 @@ export class SearchstudentComponent {
       
     
     }
+    deleteBtn=(id:any)=>{
+      let data:any={"id":id}
+      this.api.deleteStudent(data).subscribe(
+        (response:any)=>{
+          console.log(response)
+          if(response.status=="success"){
+            alert("Student Deleted")
+          } else{
+            alert("Student not deleted")
+          }
+        }
+      )
+    }
 
 }
